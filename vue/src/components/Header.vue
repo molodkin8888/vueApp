@@ -7,7 +7,7 @@
         dark
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title>Welcome to my test-task :)</v-toolbar-title>
+      <v-toolbar-title>{{ welcome }}</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -39,11 +39,11 @@
     >
       <v-card>
         <v-card-title class="text-h5">
-          What I'm using on this app ?
+          {{ title }}
         </v-card-title>
 
         <v-card-text>
-          Actually I'm using different components from Vuetify, axios for sending GET request, props for sending to "Comments" component the relevant data
+          {{ info }}
         </v-card-text>
 
         <v-card-actions>
@@ -68,6 +68,9 @@ export default {
     drawer: false,
     group: null,
     dialog: false,
+    welcome: 'Welcome to my test-task :)',
+    title: 'What I am using on this app ?',
+    info: 'Actually I am using different components from Vuetify, axios for sending GET request, props for sending to "Comments" component the relevant data and simple JEST test'
   }),
 }
 </script>
